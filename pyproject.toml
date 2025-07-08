@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "project"
+version = "0.1.0"
+description = ""
+authors = ["Ednilton Rauh - Linuxell <ednilton.rauh@gestao.gov.br>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+langchain-core = "^0.3.68"
+langchain-openai = "^0.3.27"
+langchain-community = "^0.3.27"
+python-dotenv = "^1.1.1"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.32.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

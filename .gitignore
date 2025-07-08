@@ -1,0 +1,275 @@
+# =============================================================================
+# GUIA TURÍSTICO IA - .gitignore
+# =============================================================================
+
+# Environment Variables (CRÍTICO - NUNCA COMMITAR)
+# =============================================================================
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+.env.*.local
+.env.backup
+
+# API Keys e Secrets (SEGURANÇA)
+# =============================================================================
+secrets.json
+config/secrets.py
+api_keys.txt
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python Cache e Compilados
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# =============================================================================
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env-*/
+pyvenv.cfg
+
+# Poetry (manter poetry.lock para reproduzibilidade)
+# =============================================================================
+# poetry.lock  # Descomente apenas se quiser ignorar o lock file
+
+# Testing e Coverage
+# =============================================================================
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.cache
+nosetests.xml
+test-results/
+test_report.txt
+
+# Logs e Debug
+# =============================================================================
+*.log
+logs/
+debug.log
+error.log
+access.log
+app.log
+chat.log
+local_test.log
+
+# IDEs e Editores
+# =============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sistema Operacional
+# =============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.com.apple.timemachine.donotpresent
+.AppleDouble
+.LSOverride
+Icon
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Jupyter Notebook
+# =============================================================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# Arquivos Temporários
+# =============================================================================
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.swp
+
+# Dados Locais e Desenvolvimento
+# =============================================================================
+# Arquivos de sessão local
+sessions/
+local_sessions/
+conversation_history/
+user_data/
+
+# Arquivos de teste local
+local_test.py
+test_local.py
+debug_*.py
+temp_*.py
+
+# Dumps de dados
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+data/
+backups/
+
+# Uploads e arquivos do usuário
+uploads/
+user_files/
+attachments/
+
+# Dependências locais
+# =============================================================================
+node_modules/  # Se adicionar frontend futuramente
+bower_components/
+
+# Configurações locais específicas
+# =============================================================================
+local_config.py
+local_settings.py
+development_settings.py
+config/local.py
+
+# Docker (para futuras expansões)
+# =============================================================================
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Arquivos de build e distribuição
+# =============================================================================
+*.tar.gz
+*.zip
+*.rar
+*.7z
+release/
+packages/
+
+# Certificados e SSL
+# =============================================================================
+*.crt
+*.cert
+*.cer
+*.p7b
+*.p7s
+*.pfx
+ssl/
+certificates/
+
+# Monitoramento e Analytics
+# =============================================================================
+.nyc_output
+.coverage.*
+coverage/
+
+# Arquivos específicos do projeto
+# =============================================================================
+# Chaves de API de teste
+test_api_keys.txt
+demo_keys.env
+
+# Arquivos de conversação privados
+private_conversations/
+personal_chats/
+
+# Configurações de desenvolvimento pessoal
+dev_config.json
+personal_settings.py
+
+# Arquivos grandes de modelo (se usar modelos locais)
+models/
+*.model
+*.bin
+*.safetensors
+
+# Cache de requests
+.requests-cache.db
+http_cache/
+
+# =============================================================================
+# IMPORTANTE: 
+# - Sempre verifique se .env não está sendo commitado
+# - Mantenha poetry.lock para reproduzibilidade
+# - Adicione arquivos específicos conforme o projeto evolui
+# =============================================================================
